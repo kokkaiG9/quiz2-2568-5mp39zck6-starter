@@ -1,4 +1,5 @@
 import { useState } from "react";
+import handleSubmit from "../components/Modal";
 import { Button, Stack, Title, Divider, Container } from "@mantine/core";
 import { v4 as uuidv4 } from "uuid";
 
@@ -19,12 +20,17 @@ export default function ExpenseTracker() {
       <Title order={2} mb="md">
         Expense Tracker
       </Title>
-      <Button>Add Expense Item</Button>
+      <Button
+      onClick={}
+      >
+        Add Expense Item
+      </Button>
       {/* Type additional AddExpenseModal here. */}
-
+      
+      
       <Divider my="md" />
       {/* Type additional total cost here. */}
-      <Title order={4}>Total cost: {} Baht</Title>
+      <Title order={4}>Total cost: {computeTotalPayment().toLocaleString()} Baht</Title>
       <Stack my="sm">{/* Type additional text here. */}</Stack>
 
       <Divider my="md" />
